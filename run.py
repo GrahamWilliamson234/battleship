@@ -58,3 +58,35 @@ def timer():
     return
 timer()
 
+def get_ship(long,taken):
+
+    ok = True
+    while ok:      
+        ship = []
+        print("")
+        print("                      0 1 2 3 4 5 6 7 8 9 ")
+        print("                   0  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ")
+        print("                   1  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ")
+        print("                   2  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ")
+        print("                   3  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ")
+        print("                   4  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ")
+        print("                   5  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ")
+        print("                   6  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ")
+        print("                   7  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ")
+        print("                   8  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ")
+        print("                   9  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ")
+        print("")
+        print("             Let's get your Navy ready for battle")
+        print("            Enter your coordinates for ship of length ",long)
+        for i in range(long):
+            vessel_num = input("              Please enter a coordinate number ")
+            ship.append(int(vessel_num))       
+        ship = check_ok(ship,taken)
+        if ship[0] != -1:
+            taken = taken + ship
+            break
+        else:
+           print("ERROR - Please try again") 
+        
+    return ship,taken
+       
