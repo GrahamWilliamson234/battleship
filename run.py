@@ -90,3 +90,45 @@ def get_ship(long,taken):
         
     return ship,taken
        
+def create_ships(taken,vessels):
+
+    ships = []
+    
+    for vessel in vessels:
+        ship,taken = get_ship(vessel,taken)
+        ships.append(ship)
+        
+    return ships,taken
+
+def check_vessel(b,start,dirn,taken):
+    
+    vessel = []
+    if dirn == 1:
+        for i in range(b):
+            vessel.append(start - i*10)
+    elif dirn == 2:
+        for i in range(b):
+            vessel.append(start + i)
+    elif dirn == 3:
+        for i in range(b):
+            vessel.append(start + i*10)
+    elif dirn == 4:
+        for i in range(b):
+            vessel.append(start - i)
+    vessel = check_ok(vessel,taken)           
+    return vessel  
+
+def create_boats(taken,boats):
+
+    ships = []
+    for b in boats:
+        boat = [-1]
+        while boat[0] == -1:
+            boat_start = randrange(99)
+            boat_direction = randrange(1,4)
+            boat = check_vessel(b,boat_start,boat_direction,taken)
+        ships.append(boat)
+        taken = taken + boat
+    
+    return ships,taken
+
