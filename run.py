@@ -23,3 +23,15 @@ def check_ok(vessel,taken):
                 break
 
     return vessel
+
+def hello():
+    name = str(input("Please enter your name: "))
+    print("\033[0;31;40m\n")
+    print("                              ")
+    print ("Welcome Fleet Commander "  + str(name)) 
+    print("                              ")
+    print("Sir,                          ")
+    print("your ships await your orders. ")
+    print("Contacting your ships now...  ")
+    return
+hello()
