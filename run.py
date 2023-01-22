@@ -132,3 +132,134 @@ def create_boats(taken,boats):
     
     return ships,taken
 
+def show_board_c(taken):
+    print("")
+    print("")
+    print("          Battle of the Sea's    ")
+    print("                It's War    ")
+    print("     0  1  2  3  4  5  6  7  8  9")
+
+    place = 0
+    for x in range(10):
+        row = ""
+        for y in range(10):
+            ch = " ~ "
+            if place in taken:
+                ch = " o "   
+            row = row + ch
+            place = place + 1
+            
+        print(x," ",row)
+
+def get_shot_sink(guesses,tactics):
+    
+    ok = "n"
+    while ok == "n":
+        try:
+            if len(tactics) > 0:
+                shot = tactics[0]
+            else:
+                shot = randrange(99)
+            if shot not in guesses:
+                ok = "y"
+                guesses.append(shot)
+                break
+        except:
+            print("Incorrect entry - Please enter again ")
+            
+    return shot,guesses
+
+def show_board(hit,miss,sink):
+    print("         Battle of the Sea's    ")
+    print("               It's War    ")
+    print("     0  1  2  3  4  5  6  7  8  9")
+
+    place = 0
+    for x in range(10):
+        row = ""
+        for y in range(10):
+            ch = " ~ "
+            if place in miss:
+                ch = " O " 
+            elif place in hit:
+                ch = " X "
+            elif place in sink:
+                ch = " / "   
+            row = row + ch
+            place = place + 1
+            
+        print(x," ",row)
+
+def check_shot(shot,ships,hit,miss,sink):
+    
+    missed = 0
+    for i in range(len(ships)):      
+        if shot in ships[i]:
+            ships[i].remove(shot)
+            if len(ships[i]) > 0:
+                hit.append(shot)
+                missed = 1
+            else:
+                sink.append(shot)
+                missed = 2                              
+    if missed == 0:
+        miss.append(shot)
+                
+    return ships,hit,miss,sink,missed
+
+def calc_tactics(shot,tactics,guesses,hit):
+    
+    temp = []
+    if len(tactics) < 1:
+        temp = [shot-1,shot+1,shot-10,shot+10]
+    else:
+        if shot-1 in hit:
+            temp = [shot+1]
+            for num in [2,3,4,5,6,7,8]:
+                if shot-num not in hit:
+                    temp.append(shot-num) 
+                    break 
+        elif shot+1 in hit:
+            temp = [shot-1]
+            for num in [2,3,4,5,6,7,8]:
+                if shot+num not in hit:
+                    temp.append(shot+num) 
+                    break
+        if shot-10 in hit:
+            temp = [shot+10]
+            for num in [20,30,40,50,60,70,80]:
+                if shot-num not in hit:
+                    temp.append(shot-num) 
+                    break 
+        elif shot+10 in hit:
+            temp = [shot-10]
+            for num in [20,30,40,50,60,70,80]:
+                if shot+num not in hit:
+                    temp.append(shot+num) 
+                    break
+    cand =[]
+    for i in range(len(temp)):
+        if temp[i] not in guesses and temp[i] < 100 and temp[i] > -1:
+            cand.append(temp[i])
+    random.shuffle(cand)
+    
+    return cand
+
+def get_shot(guesses):
+    
+    ok = "n"
+    while ok == "n":
+        try:
+            shot = input("Please enter firing coordinates ")
+            shot = int(shot)
+            if shot < 0 or shot > 99:
+                print("Incorrect Coordinates, Please fire again")
+            elif shot in guesses:
+                print("Incorrect Coordinates, already tried before")                
+            else:
+                ok = "y"
+                break
+        except:
+            print("Incorrect Coordinates - Please enter again")
+            
+    return shot
