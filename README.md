@@ -81,6 +81,9 @@ No bugs remaining.
 <li>In settings go to the pages tab, located on the left.</li>
 <li>Under source, select the branch to master and click save.</li>
 <li>When the master branch has been selected, the page will refresh ti indicate the successful deployment.</li>
+<li>Create a Heroku app.</li>
+<li>Set buildpacks to Python and Nodejs in that order.</li>
+<li>Click on deploy.</li>
 </ol>
 
 ### Live link found here -
