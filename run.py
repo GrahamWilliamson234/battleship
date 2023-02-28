@@ -26,16 +26,31 @@ def check_ok(vessel, taken):
 
     return vessel
 
+# hello
+
+
 def hello():
-    name = str(input("Please enter your name: "))
-    print("\033[0;31;40m\n")
-    print("                              ")
-    print ("Welcome Fleet Commander "  + str(name)) 
-    print("                              ")
-    print("Sir,                          ")
-    print("your ships await your orders. ")
-    print("Contacting your ships now...  ")
-    return
+    while True:
+        name = input("Please enter your name: ")
+        if name:
+            break
+        print("Error: name cannot be empty. Please try again.")
+    
+    while True:
+        rank = input("Please enter your rank: ")
+        if rank:
+            break
+        print("Error: rank cannot be empty. Please try again.")
+        
+    print()
+    print(f"Welcome Fleet {rank} {name}")
+    print(" ")
+    print("Sir,")
+    print(f"Your ships await your orders, {rank}.")
+    print("Attempting to contact your fleet now...")
+
+
+
 hello()
 
 def timer():
