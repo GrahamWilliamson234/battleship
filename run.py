@@ -206,7 +206,8 @@ def get_shot_sink(guesses, tactics):
     return shot, guesses
 
 
-def show_board(hit,miss,sink):
+# show board
+def show_board(hit, miss, sink):
     print("         Battle of the Sea's    ")
     print("               It's War    ")
     print("     0  1  2  3  4  5  6  7  8  9")
@@ -217,15 +218,15 @@ def show_board(hit,miss,sink):
         for y in range(10):
             ch = " ~ "
             if place in miss:
-                ch = " O " 
+                ch = " O "
             elif place in hit:
                 ch = " X "
             elif place in sink:
-                ch = " / "   
+                ch = " / "
             row = row + ch
             place = place + 1
-            
-        print(x," ",row)
+        print(x, " ", row)
+
 
 def check_shot(shot,ships,hit,miss,sink):
     
