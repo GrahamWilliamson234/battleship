@@ -188,8 +188,8 @@ def show_board_c(taken):
         print(x, " ", row)
 
 
-def get_shot_sink(guesses,tactics):
-    
+# get shot sink
+def get_shot_sink(guesses, tactics):
     ok = "n"
     while ok == "n":
         try:
@@ -201,10 +201,10 @@ def get_shot_sink(guesses,tactics):
                 ok = "y"
                 guesses.append(shot)
                 break
-        except:
-            print("Incorrect entry - Please enter again ")
-            
-    return shot,guesses
+        except Exception as e:
+            print("Incorrect entry - Please enter again: ", e)
+    return shot, guesses
+
 
 def show_board(hit,miss,sink):
     print("         Battle of the Sea's    ")
