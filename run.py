@@ -363,3 +363,17 @@ def create_ships(taken, vessels):
         ships.append(ship)
     return ships, taken
 
+
+def create_boats(taken, boats):
+
+    ships = []
+    for b in boats:
+        boat = [-1]
+        while boat[0] == -1:
+            boat_start = randrange(99)
+            boat_direction = randrange(1, 4)
+            boat = check_vessel(b, boat_start, boat_direction, taken)
+        ships.append(boat)
+        taken = taken + boat
+    return ships, taken
+
