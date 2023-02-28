@@ -301,13 +301,17 @@ def get_shot(guesses):
             print("Incorrect Coordinates - Please enter again")
     return shot
 
+# check list
+
+
 def check_if_empty_2(list_of_lists):
-    return all([not elem for elem in list_of_lists ])
+    return all([not elem for elem in list_of_lists])
+
 
 hit1 = []
 miss1 = []
 sink1 = []
-guesses1 = []  
+guesses1 = []
 missed1 = 0
 tactics1 = []
 taken1 = []
@@ -315,45 +319,41 @@ taken2 = []
 hit2 = []
 miss2 = []
 sink2 = []
-guesses2 = []  
+guesses2 = []
 missed2 = 0
 tactics2 = []
 
-battleships = [5,4,3,3,2,2]
-ships1,taken1 = create_boats(taken1,battleships)
-ships2,taken2 = create_ships(taken2,battleships)
+battleships = [5, 4, 3, 3, 2]
+ships1, taken1 = create_boats(taken1, battleships)
+ships2, taken2 = create_ships(taken2, battleships)
 show_board_c(taken2)
 
-for i in range(100):
+for i in range(10):
 
     guesses1 = hit1 + miss1 + sink1
     shot1 = get_shot(guesses1)
-    ships1,hit1,miss1,sink1,missed1 = check_shot(shot1,ships1,hit1,miss1,sink1)
-    show_board(hit1,miss1,sink1)
+    ships1, hit1, miss1, sink1, missed1 = check_shot(
+        shot1, ships1, hit1, miss1, sink1
+    )
+    show_board(hit1, miss1, sink1)
     if check_if_empty_2(ships1):
-        print("                 You are the Winner in",i)
-        print("            ____                                               ")
-        print("   \    /  |    |   |   |        \            /  |   |\    |   ")
-        print("    \  /   |    |   |   |         \          /   |   | \   |   ")
-        print("     \/    |    |   |   |          \        /    |   |  \  |   ")
-        print("     /     |    |   |   |           \  /\  /     |   |   \ |   ")
-        print("    /      |____|   |___|            \/  \/      |   |    \|   ")
+        print("                 You are the Winner in", i)
         print("")
         print("                      Let there be peace")
-        break    
-    shot2,guesses2 = get_shot_sink(guesses2,tactics2)
-    ships2,hit2,miss2,sink2,missed2 = check_shot(shot2,ships2,hit2,miss2,sink2)
-    show_board(hit2,miss2,sink2)
-    
+        break
+    shot2, guesses2 = get_shot_sink(guesses2, tactics2)
+    ships2, hit2, miss2, sink2, missed2 = check_shot(
+        shot2, ships2, hit2, miss2, sink2
+    )
+    show_board(hit2, miss2, sink2)
     if missed2 == 1:
-        tactics2 = calc_tactics(shot2,tactics2,guesses2,hit2)
+        tactics2 = calc_tactics(shot2, tactics2, guesses2, hit2)
     elif missed2 == 2:
         tactics2 = []
     elif len(tactics2) > 0:
         tactics2.pop(0)
 
     if check_if_empty_2(ships2):
-        print("End of the War - Your enemy wins",i)
+        print("End of the War - Your enemy wins", i)
         print("Time to re-group and fight another day")
         break
-
