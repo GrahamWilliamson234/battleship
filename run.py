@@ -351,3 +351,15 @@ for i in range(10):
         print("End of the War - Your enemy wins", i)
         print("Time to re-group and fight another day")
         break
+
+# reset code below
+
+
+def create_ships(taken, vessels):
+
+    ships = []
+    for vessel in vessels:
+        ship, taken = get_ship(vessel, taken)
+        ships.append(ship)
+    return ships, taken
+
