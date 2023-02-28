@@ -377,3 +377,44 @@ def create_boats(taken, boats):
         taken = taken + boat
     return ships, taken
 
+
+def main():
+    taken = []
+    ships, taken = create_ships(taken, [5, 4, 3, 3, 2])
+    boats, taken = create_boats(taken, [5, 4, 3, 3, 2])
+    print("The enemy has placed their ships and boats on the board.\n")
+    guesses = []
+    tactics = []
+    shots = 0
+    hits = 0
+    show_board_c(guesses)
+    while hits < 100:
+        try:
+            shot, sink, tactics = get_shot_sink(guesses, tactics)
+            shots += 1
+            if sink:
+                print("You sank the enemy's", sink)
+            if shot in taken:
+                print("Direct hit!")
+                hits += 1
+            else:
+                print("Miss!")
+            guesses.append(shot)
+            show_board_c(guesses)
+        except:
+            print("Invalid input. Please try again.")
+            continue
+    print("You won the battle in", shots, "shots!")
+    return
+
+
+while True:
+    answer = input("Do you want to play again? (y/n): ")
+    if answer.lower() == "y":
+        main()
+    elif answer.lower() == "n":
+        print("Thanks for playing! GOODBYE.")
+        break
+    else:
+        print("Invalid input. Please try again.")
+ 
