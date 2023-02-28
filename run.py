@@ -149,7 +149,6 @@ def check_vessel(b, start, dirn, taken):
             vessel.append(start - i)
     vessel = check_ok(vessel, taken)
     return vessel
-
 # check boats
 
 
@@ -187,7 +186,6 @@ def show_board_c(taken):
             place = place + 1
         print(x, " ", row)
 
-
 # get shot sink
 def get_shot_sink(guesses, tactics):
     ok = "n"
@@ -204,7 +202,6 @@ def get_shot_sink(guesses, tactics):
         except Exception as e:
             print("Incorrect entry - Please enter again: ", e)
     return shot, guesses
-
 
 # show board
 def show_board(hit, miss, sink):
@@ -227,7 +224,6 @@ def show_board(hit, miss, sink):
             place = place + 1
         print(x, " ", row)
 
-
 # check shot
 def check_shot(shot, ships, hit, miss, sink):
     missed = 0
@@ -243,7 +239,6 @@ def check_shot(shot, ships, hit, miss, sink):
     if missed == 0:
         miss.append(shot)
     return ships, hit, miss, sink, missed
-
 
 # tactics
 def calc_tactics(shot, tactics, guesses, hit):
@@ -281,7 +276,6 @@ def calc_tactics(shot, tactics, guesses, hit):
             cand.append(temp[i])
     random.shuffle(cand)
     return cand
-
 
 # get shot
 def get_shot(guesses):
