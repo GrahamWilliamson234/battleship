@@ -53,11 +53,14 @@ def hello():
 
 hello()
 
+# timer
+
+
 def timer():
     start_timer = time()
-    struct = localtime( start_timer)
-    print("\nContacting Ships At:" , strftime("%x" , struct))
-    i = 10
+    struct = localtime(start_timer)
+    print("\nContacting Ships On:", strftime("%x", struct))
+    i = 5
     while i > -1:
         print(i)
         i -= 1
@@ -65,14 +68,10 @@ def timer():
     end_timer = time()
     difference = round(end_timer - start_timer)
     print("\033[1;31;47m\n")
-    print("")
-    print("       _____  ____                                  ____      ")
-    print("     |   |   |             \            /   /\     |    \     ")
-    print("     |   |   |___           \    /\    /   /  \    | ___/     ")
-    print("     |   |       |           \  /  \  /   /----\   |    \     ")
-    print("     |   |   ____|            \/    \/   /      \  |     \    ")
-    print("                                                              ")
+    print("         Let the War begin..         ")
     return
+
+
 timer()
 
 def get_ship(long,taken):
