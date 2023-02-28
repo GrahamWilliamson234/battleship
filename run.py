@@ -283,8 +283,8 @@ def calc_tactics(shot, tactics, guesses, hit):
     return cand
 
 
+# get shot
 def get_shot(guesses):
-    
     ok = "n"
     while ok == "n":
         try:
@@ -293,13 +293,12 @@ def get_shot(guesses):
             if shot < 0 or shot > 99:
                 print("Incorrect Coordinates, Please fire again")
             elif shot in guesses:
-                print("Incorrect Coordinates, already tried before")                
+                print("Incorrect Coordinates, already tried before")
             else:
                 ok = "y"
                 break
-        except:
+        except ValueError:
             print("Incorrect Coordinates - Please enter again")
-            
     return shot
 
 def check_if_empty_2(list_of_lists):
