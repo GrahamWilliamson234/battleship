@@ -111,15 +111,14 @@ def get_ship(long, taken):
 
             ship.append(vessel_num)
 
-        ship = check_ok(ship,taken)
+# Check if the ship is valid
+        ship = check_ok(ship, taken)
         if ship[0] != -1:
-            taken = taken + ship
-            break
+            taken += ship
+            return ship, taken
         else:
-           print("ERROR - Please try again") 
-        
-    return ship,taken
-       
+            print("ERROR: The coordinates are invalid. Please again.")
+
 def create_ships(taken,vessels):
 
     ships = []
