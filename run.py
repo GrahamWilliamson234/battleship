@@ -130,8 +130,10 @@ def create_ships(taken, vessels):
         ships.append(ship)
     return ships, taken
 
-def check_vessel(b,start,dirn,taken):
-    
+# check vessel
+
+
+def check_vessel(b, start, dirn, taken):
     vessel = []
     if dirn == 1:
         for i in range(b):
@@ -145,9 +147,9 @@ def check_vessel(b,start,dirn,taken):
     elif dirn == 4:
         for i in range(b):
             vessel.append(start - i)
-    vessel = check_ok(vessel,taken)           
-    return vessel  
-
+    vessel = check_ok(vessel, taken)
+    return vessel
+    
 def create_boats(taken,boats):
 
     ships = []
