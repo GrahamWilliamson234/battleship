@@ -166,10 +166,13 @@ def create_boats(taken, boats):
         taken = taken + boat
     return ships, taken
 
+# show board taken
+
+
 def show_board_c(taken):
     print("")
     print("")
-    print("          Battle of the Sea's    ")
+    print("          Battle of the Atlantic    ")
     print("                It's War    ")
     print("     0  1  2  3  4  5  6  7  8  9")
 
@@ -179,11 +182,11 @@ def show_board_c(taken):
         for y in range(10):
             ch = " ~ "
             if place in taken:
-                ch = " o "   
+                ch = " o "
             row = row + ch
             place = place + 1
-            
-        print(x," ",row)
+        print(x, " ", row)
+
 
 def get_shot_sink(guesses,tactics):
     
