@@ -119,15 +119,16 @@ def get_ship(long, taken):
         else:
             print("ERROR: The coordinates are invalid. Please again.")
 
-def create_ships(taken,vessels):
+# create ships
+
+
+def create_ships(taken, vessels):
 
     ships = []
-    
     for vessel in vessels:
-        ship,taken = get_ship(vessel,taken)
+        ship, taken = get_ship(vessel, taken)
         ships.append(ship)
-        
-    return ships,taken
+    return ships, taken
 
 def check_vessel(b,start,dirn,taken):
     
