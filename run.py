@@ -74,12 +74,15 @@ def timer():
 
 timer()
 
-def get_ship(long,taken):
+# get ships
 
-    ok = True
-    while ok:      
+
+def get_ship(long, taken):
+    while True:
         ship = []
         print("")
+
+# Print game board
         print("                      0 1 2 3 4 5 6 7 8 9 ")
         print("                   0  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ")
         print("                   1  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ")
@@ -92,11 +95,22 @@ def get_ship(long,taken):
         print("                   8  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ")
         print("                   9  ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ")
         print("")
-        print("             Let's get your Navy ready for battle")
-        print("            Enter your coordinates for ship of length ",long)
+# print commands
+        print("Enter your coordinates for ship of length ", long)
         for i in range(long):
-            vessel_num = input("              Please enter a coordinate number ")
-            ship.append(int(vessel_num))       
+            while True:
+                try:
+                    vessel_num = int(input("Enter a coordinate number: "))
+                    if vessel_num not in range(99):
+                        raise ValueError
+                    if vessel_num in ship:
+                        raise ValueError("Already entered coordinate!")
+                    break
+                except ValueError:
+                    print("Invalid Enter an integer between 0 and 99.")
+
+            ship.append(vessel_num)
+
         ship = check_ok(ship,taken)
         if ship[0] != -1:
             taken = taken + ship
