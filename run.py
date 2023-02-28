@@ -149,20 +149,22 @@ def check_vessel(b, start, dirn, taken):
             vessel.append(start - i)
     vessel = check_ok(vessel, taken)
     return vessel
-    
-def create_boats(taken,boats):
+
+# check boats
+
+
+def create_boats(taken, boats):
 
     ships = []
     for b in boats:
         boat = [-1]
         while boat[0] == -1:
             boat_start = randrange(99)
-            boat_direction = randrange(1,4)
-            boat = check_vessel(b,boat_start,boat_direction,taken)
+            boat_direction = randrange(1, 4)
+            boat = check_vessel(b, boat_start, boat_direction, taken)
         ships.append(boat)
         taken = taken + boat
-    
-    return ships,taken
+    return ships, taken
 
 def show_board_c(taken):
     print("")
