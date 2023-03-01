@@ -1,7 +1,7 @@
 # Welcome to my Project 3 README page
 
 <ul class="navlist">
-                <li><a href="#my project 3">My Project 2</a></li>
+                <li><a href="#my project 3">My Project 3</a></li>
                 <li><a href="#design">Design</a></li>
                 <li><a href="#location">Location</a></li>
                 <li><a href="#testing">Testing</a></li>
