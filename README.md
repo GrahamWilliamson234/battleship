@@ -86,8 +86,8 @@ No bugs remaining.
 <li>Click on deploy.</li>
 </ol>
 
-### Live link found here -
-https://
+### Live Github link - https://grahamwilliamson234.github.io/battleship/
+### Herokuapp link - https://battleship2023.herokuapp.com/
 
 
 # Course
