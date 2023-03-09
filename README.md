@@ -65,6 +65,12 @@ Code continuously tested my throught the process.
 <li>Pep8 in Gitpod use.</li>
 <li>I have played the game several times to check its useability.</li>
 </ul>
+<div>
+<img title="test" alt="code testing" src="assets/images/ci_python_linter.jpg">
+</div>
+<div>
+<img title="test" alt="code testing" src="assets/images/syntax_checker.jpeg">
+</div>
 
 ## Bugs
 
