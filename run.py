@@ -79,7 +79,7 @@ timer()
 def get_ship(long, taken):
     while True:
         ship = []
-        print("")
+        print("\033[1;31;47m")
 
 # Print game board
         print("                      0 1 2 3 4 5 6 7 8 9 ")
@@ -326,7 +326,7 @@ ships1, taken1 = create_boats(taken1, battleships)
 ships2, taken2 = create_ships(taken2, battleships)
 show_board_c(taken2)
 
-for i in range(10):
+for i in range(100):
 
     guesses1 = hit1 + miss1 + sink1
     shot1 = get_shot(guesses1)
