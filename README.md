@@ -3,8 +3,17 @@
 <ul class="navlist">
                 <li><a href="#my project 3">My Project 3</a></li>
                 <li><a href="#design">Design</a></li>
+                <ul>
+                    <li><a href="#starting-point">Starting Point</a></li>
+                    <li><a href="#how-to-play">How to Play</a></li>
+                    <li><a href="#your-ships">Your Ships</a></li>
+                    <li><a href="#firing">Firing</a></li>
+                </ul>
                 <li><a href="#location">Location</a></li>
                 <li><a href="#testing">Testing</a></li>
+                <ul>
+                    <li><a href="#bugs">Bugs</a></li>
+                </ul>
                 <li><a href="#deployment">Deployment</a></li>
                 <li><a href="#course">Course</a></li>
                 <li><a href="#books">Books</a></li>
@@ -26,26 +35,26 @@ I hope you have fun.
 
 My design for this battleship game in Python is a very basic game, it follows the traditional rules and layout. I went for a numbers layout both horizontal and vertical as I found it a easy and simple of game operation based on the idea of naval coordinates. 
 
-## <b>Starting Point:</b>
+# Starting-Point
 The start of the game the players name is requested then the player is welcomed to the game and given the rank of Fleet Commander and that there ships await orders, then a countdown starts, adding some animation to contact the ships.
 
 <div>
 <img title="start" alt="battleship game welcome page" src="assets/images/start.jpeg";>
 </div>
 
-## <b> How to Play:</b>
+# How-to-Play
 At this point the declaration of war is made, below that the player will see a grid map of the game. The player is requested to get there navy ready for battle by requesting the coordinates for the ships. Each player has 6 ships in different length, firstly the player is asked for the coordinates for ship of length 5 meaning thats the size of that ship, after the player enters these coordinates the player will be requested the coordinates of the next ship until all 6 ships have there coordinates set.
 <div>
 <img title="Rules" alt="game set-up layout" src="assets/images/its_war.jpeg";>
 </div>
 
-## <b>Your Ships:</b>
+# Your-Ships:
 After you enter the coordinates for all the ships, the player will be show a grid map of there ships indicated with the letter (o). And now the game begins. The player is now asked for there first firing coordinates.
 <div>
 <img title="Your Ships" alt="player ships map" src="assets/images/your_ships.jpeg">
 </div>
 
-## <b>Firing:</b>
+# Firing:
 From now, both the player and computer will takes turns firing at the others board until all one player hits all the others ships.
 
 The top grid is the players and the bottom is the computers, you can see that the player entered the coordinate 25, which was a miss and is now marked with an (o). if it was a hit it will be marked (X).
@@ -63,6 +72,7 @@ Code continuously tested my throught the process.
 <ul>
 <li>Each function tested to ensure viability.</li>
 <li>Pep8 in Gitpod use.</li>
+<li>Python linter/Syntax checker results below</li>
 <li>I have played the game several times to check its useability.</li>
 </ul>
 <div>
@@ -71,13 +81,17 @@ Code continuously tested my throught the process.
 <div>
 <img title="test" alt="code testing" src="assets/images/syntax_checker.jpeg">
 </div>
+<hr>
 
-## Bugs
+# Bugs
 
 As each bit of code was tested throughout, any bugs found were corrected.
 To ensure this tasks efficiency, the functionality of the code was check regularly.
 
-No bugs remaining.
+There is an end of game error that I couldnt fix, I reached out on Slack but got no reply/help.
+This error wont reset the game fully, slack link to question below:
+## Slack link [Link](https://code-institute-room.slack.com/archives/C0440SHSV37/p1677620016678219)
+<hr>
 
 # Deployment
 
@@ -92,8 +106,8 @@ No bugs remaining.
 <li>Click on deploy.</li>
 </ol>
 
-### Live Github link - https://grahamwilliamson234.github.io/battleship/
-### Herokuapp link - https://battleship2023.herokuapp.com/
+### Live Github link - [Link](https://grahamwilliamson234.github.io/battleship/)
+### Herokuapp link - [Link](https://battleship2023.herokuapp.com/)
 
 
 # Course
