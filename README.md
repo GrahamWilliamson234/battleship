@@ -2,6 +2,10 @@
 
 <ul class="navlist">
                 <li><a href="#my project 3">My Project 3</a></li>
+                <ul>
+                    <li><a href="#aim">Aim</a></li>
+                    <li><a href="#fork-repository">Fork Repository</a></li>
+                </ul>
                 <li><a href="#design">Design</a></li>
                 <ul>
                     <li><a href="#starting-point">Starting Point</a></li>
@@ -15,6 +19,10 @@
                     <li><a href="#bugs">Bugs</a></li>
                 </ul>
                 <li><a href="#deployment">Deployment</a></li>
+                <ul>
+                    <li><a href="#clone-repository">Clone Repository</a></li>
+                    <li><a href="#fork-repository">Fork Repository</a></li>
+                </ul>
                 <li><a href="#course">Course</a></li>
                 <li><a href="#books">Books</a></li>
                 <li><a href="#influences">Influences</a></li>
@@ -30,6 +38,9 @@ This is my third course project, by now I have gained a little more experience b
 
 I hope you have fun.
 <hr>
+
+# Aims
+My aim or goal with this project is to create a game, my very first, that is both functional and fun to play. As a big fan of the game battleships, I was eager to prove to myself that i could achieve my goal and hope that with further development of my coding skills, I cam add to this game and it can evolve with me.
 
 # Design.
 
@@ -51,14 +62,14 @@ At this point the declaration of war is made, below that the player will see a g
 </div>
 <hr>
 
-# Your-Ships:
+# Your-Ships
 After you enter the coordinates for all the ships, the player will be show a grid map of there ships indicated with the letter (o). And now the game begins. The player is now asked for there first firing coordinates.
 <div>
 <img title="Your Ships" alt="player ships map" src="assets/images/your_ships.jpeg">
 </div>
 <hr>
 
-# Firing:
+# Firing
 From now, both the player and computer will takes turns firing at the others board until all one player hits all the others ships.
 
 The top grid is the players and the bottom is the computers, you can see that the player entered the coordinate 25, which was a miss and is now marked with an (o). if it was a hit it will be marked (X).
