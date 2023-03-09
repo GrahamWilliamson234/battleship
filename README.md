@@ -29,11 +29,12 @@ Hi! My name is Graham. In this README page were you will find out a little about
 This is my third course project, by now I have gained a little more experience but still very much a novice. Of the options for this project I thought a Battleship would be fun with the challenging as this is one of my favourite games.
 
 I hope you have fun.
-
+<hr>
 
 # Design.
 
 My design for this battleship game in Python is a very basic game, it follows the traditional rules and layout. I went for a numbers layout both horizontal and vertical as I found it a easy and simple of game operation based on the idea of naval coordinates. 
+<hr>
 
 # Starting-Point
 The start of the game the players name is requested then the player is welcomed to the game and given the rank of Fleet Commander and that there ships await orders, then a countdown starts, adding some animation to contact the ships.
@@ -41,18 +42,21 @@ The start of the game the players name is requested then the player is welcomed 
 <div>
 <img title="start" alt="battleship game welcome page" src="assets/images/start.jpeg";>
 </div>
+<hr>
 
 # How-to-Play
 At this point the declaration of war is made, below that the player will see a grid map of the game. The player is requested to get there navy ready for battle by requesting the coordinates for the ships. Each player has 6 ships in different length, firstly the player is asked for the coordinates for ship of length 5 meaning thats the size of that ship, after the player enters these coordinates the player will be requested the coordinates of the next ship until all 6 ships have there coordinates set.
 <div>
 <img title="Rules" alt="game set-up layout" src="assets/images/its_war.jpeg";>
 </div>
+<hr>
 
 # Your-Ships:
 After you enter the coordinates for all the ships, the player will be show a grid map of there ships indicated with the letter (o). And now the game begins. The player is now asked for there first firing coordinates.
 <div>
 <img title="Your Ships" alt="player ships map" src="assets/images/your_ships.jpeg">
 </div>
+<hr>
 
 # Firing:
 From now, both the player and computer will takes turns firing at the others board until all one player hits all the others ships.
@@ -61,11 +65,13 @@ The top grid is the players and the bottom is the computers, you can see that th
 <div>
 <img title="Playing" alt="playing the game" src="assets/images/firing.jpeg">
 </div>
+<hr>
 
 # Location
 
 All my projects are also available to view on my portfolio website.
-[www.dazl.ie](https://quiz.dazl.ie)
+[www.grahamwilliamson.ie](https://project3.grahamwilliamson.ie)
+<hr>
 
 # Testing
 Code continuously tested my throught the process.
@@ -108,6 +114,24 @@ This error wont reset the game fully, slack link to question below:
 
 ### Live Github link - [Link](https://grahamwilliamson234.github.io/battleship/)
 ### Herokuapp link - [Link](https://battleship2023.herokuapp.com/)
+<hr>
+
+# Clone-Repository
+The project started to be developed by cloning the mock terminal repository provided by the Code Institute. The cloning phase of the project is as follows:
+
+Go to the GitHub repository to be cloned. Click the 'Use this template' text and and then click 'Create a new repository' in the dropdown menu that opens.
+
+The following will open on a new page. After specifying the repository name, you can create the repository without writing a description. The new repository will be created automatically.
+
+Then, if you want, you can open with the GitPod or clone it to your computer and work on locally. Since I am running locally, I will explain how I cloned it to the computer. As in the first step, we press the 'Code' button, open the dropdown menu and copy the link indicated by the arrow.
+
+Then, we open the terminal application we use from the computer and clone the repository to our computer with the 'git clone -link to be cloned-' command. Then you can develope your work using the source-code editor of your choice.
+<hr>
+
+# Fork-Repository
+
+To fork a GitHub repo, see the [Fork a GitHub repo](https://docs.github.com/en/get-started/quickstart/fork-a-repo) documentation.
+<hr>
 
 
 # Course
@@ -117,7 +141,7 @@ This error wont reset the game fully, slack link to question below:
 
 ### Code Institute [Website](https://codeinstitute.net/ie/full-stack-software-development-diploma/?utm_term=code%20institute&utm_campaign=CI+-+IRL+-+Search+-+Brand&utm_source=adwords&utm_medium=ppc&hsa_acc=8983321581&hsa_cam=14304747355&hsa_grp=128775288169&hsa_ad=595155717776&hsa_src=g&hsa_tgt=kwd-342001843376&hsa_kw=code%20institute&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gclid=Cj0KCQjwnvOaBhDTARIsAJf8eVOdV0BAxB5DwdTrFB9AvR5tJ73tLtvCsSeHDsSSq9e1gNbiXiNLTZQaAkyKEALw_wcB)
 
-<br>
+<hr>
 
 # Influences & Credit
 
@@ -128,6 +152,7 @@ This error wont reset the game fully, slack link to question below:
 ### Github [Website](https://github.com/)
 
 ### Slack [Website](https://slack.com/intl/en-ie/)
+<hr>
 
 # Acknowledgement
 
@@ -137,6 +162,7 @@ I hope I have achieved my objective on this project and created a game of my own
 ### Code Academy [Youtube](https://www.youtube.com/playlist?list=PLHdCowjFIBmI1UV60W1TVa7l91Psnw73E)
 ### Tech With Tim [Youtube](https://www.youtube.com/@TechWithTim)
 ### CHOOBYORIALS [Youtube](https://www.youtube.com/@choobtorials)
+<hr>
 
 # Books
 
