@@ -1,10 +1,10 @@
 # Welcome to my Project 3 README page
 
 <ul class="navlist">
-                <li><a href="#my project 3">My Project 3</a></li>
+                <li><a href="#my project 3">My Project 3 (Battleship Game)</a></li>
                 <ul>
-                    <li><a href="#aim">Aim</a></li>
-                    <li><a href="#fork-repository">Fork Repository</a></li>
+                    <li><a href="#aims">Aims</a></li>
+                    <li><a href="#flow-chart">Flow Chart</a></li>
                 </ul>
                 <li><a href="#design">Design</a></li>
                 <ul>
@@ -40,7 +40,15 @@ I hope you have fun.
 <hr>
 
 # Aims
-My aim or goal with this project is to create a game, my very first, that is both functional and fun to play. As a big fan of the game battleships, I was eager to prove to myself that i could achieve my goal and hope that with further development of my coding skills, I cam add to this game and it can evolve with me.
+My aim or goal with this project is to not only complete my course objective but to also create a game, my very first, that is both functional and fun to play. As a big fan of the game battleships, I was eager to prove to myself that i could achieve my goal and hope that with further development of my coding skills, I cam add to this game and it can evolve with me.
+<hr>
+
+# Flow-Chart
+A flow chart for this game created with the help of Lucid [Web-Site](https://lucid.app/documents#/dashboard)
+<div>
+<img title="flow-chart" alt="flow-chart image" src="assets/images/flow_chart.PNG";>
+</div>
+<hr>
 
 # Design.
 
