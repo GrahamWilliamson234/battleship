@@ -1,9 +1,9 @@
 from random import randrange
 import random
-from time import *
 from time import time, localtime, strftime, sleep
 
 # check
+
 
 def check_ok(vessel, taken):
     vessel.sort()
@@ -35,20 +35,19 @@ def hello():
         if name:
             break
         print("Error: name cannot be empty. Please try again.")
-    
+
     while True:
         rank = input("Please enter your rank: ")
         if rank:
             break
         print("Error: rank cannot be empty. Please try again.")
-        
+
     print()
     print(f"Welcome Fleet {rank} {name}")
     print(" ")
     print("Sir,")
     print(f"Your ships await your orders, {rank}.")
     print("Attempting to contact your fleet now...")
-
 
 
 hello()
@@ -186,6 +185,7 @@ def show_board_c(taken):
             place = place + 1
         print(x, " ", row)
 
+
 # get shot sink
 def get_shot_sink(guesses, tactics):
     ok = "n"
@@ -202,6 +202,7 @@ def get_shot_sink(guesses, tactics):
         except Exception as e:
             print("Incorrect entry - Please enter again: ", e)
     return shot, guesses
+
 
 # show board
 def show_board(hit, miss, sink):
@@ -224,6 +225,7 @@ def show_board(hit, miss, sink):
             place = place + 1
         print(x, " ", row)
 
+
 # check shot
 def check_shot(shot, ships, hit, miss, sink):
     missed = 0
@@ -239,6 +241,7 @@ def check_shot(shot, ships, hit, miss, sink):
     if missed == 0:
         miss.append(shot)
     return ships, hit, miss, sink, missed
+
 
 # tactics
 def calc_tactics(shot, tactics, guesses, hit):
@@ -276,6 +279,7 @@ def calc_tactics(shot, tactics, guesses, hit):
             cand.append(temp[i])
     random.shuffle(cand)
     return cand
+
 
 # get shot
 def get_shot(guesses):
@@ -401,7 +405,7 @@ def main():
                 print("Miss!")
             guesses.append(shot)
             show_board_c(guesses)
-        except:
+        except ValueError:
             print("Invalid input. Please try again.")
             continue
     print("You won the battle in", shots, "shots!")
