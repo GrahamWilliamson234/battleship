@@ -116,6 +116,7 @@ To ensure this tasks efficiency, the functionality of the code was check regular
 There is an end of game error that I couldnt fix, I reached out on Slack but got no reply/help.
 This error wont reset the game fully, slack link to question below:
 ## Slack link [Link](https://code-institute-room.slack.com/archives/C0440SHSV37/p1677620016678219)
+This bug remains.
 <hr>
 
 # Deployment
